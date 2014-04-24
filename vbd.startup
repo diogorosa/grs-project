@@ -1,0 +1,2 @@
+ifconfig eth0 10.20.78.5 up
+route add default gw 10.20.78.1 dev eth0
