@@ -1,4 +1,4 @@
-ifconfig eth0 30.40.1.2 up
+ifconfig eth0 30.40.1.2 netmask 255.255.255.0 up
 route add default gw 30.40.1.1 dev eth0
 
 /etc/init.d/bind start

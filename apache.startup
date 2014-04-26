@@ -1,4 +1,4 @@
-ifconfig eth0 10.20.78.7 up
+ifconfig eth0 10.20.78.7 netmask 255.255.255.0 up
 route add default gw 10.20.78.1 dev eth0
 
 /etc/init.d/apache2 start
