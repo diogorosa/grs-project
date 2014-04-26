@@ -7,8 +7,12 @@ $TTL    60000
                         0 ; negative cache ttl
                         )
 @               IN      NS      dnsteo.teo.to.
+@				IN		MX 5		mail.teo.to.
 
 dnsteo          IN      A       10.20.79.3
 
 
-www		IN	A	10.20.78.7
+www				IN	A	10.20.78.7
+mail			IN	A	10.20.79.5
+imap			IN	A	10.20.79.5
+pop				IN	A	10.20.79.5
