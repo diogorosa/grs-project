@@ -4,3 +4,4 @@ ifconfig eth1 30.40.1.1 netmask 255.255.255.0 up # to rootdns
 ifconfig eth2 30.40.2.1 netmask 255.255.255.0 up # to todns
 
 route add -net 10.20.78.0 netmask 255.255.255.0 gw 30.40.3.2 dev eth3 # to coreswitch
+route add -net 10.20.79.0 netmask 255.255.255.0 gw 30.40.3.2 dev eth3 # to serviceswitch

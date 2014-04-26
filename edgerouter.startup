@@ -1,5 +1,6 @@
 ifconfig eth0 30.40.3.2 netmask 255.255.255.0 up # to FCCT
 ifconfig eth1 10.20.78.1 netmask 255.255.255.0 up # to coreswitch
+ifconfig eth3 10.20.79.1 netmask 255.255.255.0 up # to serviceswitch
 
 route add -net 30.40.0.0 netmask 255.255.255.0 gw 30.40.3.1 dev eth0 # route to tester subnet
 route add -net 30.40.1.0 netmask 255.255.255.0 gw 30.40.3.1 dev eth0 # route to root dns

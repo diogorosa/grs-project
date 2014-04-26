@@ -1,11 +1,12 @@
 $TTL    60000
-@               IN      SOA     dnsnet.net.    root.dnsnet.net. (
+@               IN      SOA     dnsto.to.    root.dnsto.to. (
                         2006031201 ; serial
                         28800 ; refresh
                         14400 ; retry
                         3600000 ; expire
                         0 ; negative cache ttl
                         )
-@               IN      NS      dnsnet.net.
+@               IN      NS      dnsto.to.
 
 dnsto         	IN      A       30.40.2.2
+server			IN 		A		10.20.78.7
