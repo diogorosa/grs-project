@@ -1,3 +1,2 @@
-ifconfig eth0 up
-route add default gw 10.20.75.2 dev eth0
 /etc/init.d/networking start
+route add default gw 10.20.75.2 dev eth0
