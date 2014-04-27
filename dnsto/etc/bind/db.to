@@ -11,3 +11,6 @@ dnsto         	IN      A       30.40.2.2
 
 teo 			IN 		NS		dnsteo.teo.to.
 dnsteo.teo		IN		A		10.20.79.3
+
+teo 			IN 		NS		dnsteosec.teo.to.
+dnsteosec.teo		IN		A		10.20.79.4
