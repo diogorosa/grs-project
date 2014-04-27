@@ -1,0 +1,17 @@
+$TTL    60000
+@               IN      SOA     dnsteosec.teo.to.    root.dnsteosec.teo.to. (
+                        2006031201 ; serial
+                        28 ; refresh
+                        14 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+@               IN      NS      dnsteosec.teo.to.
+
+dnsteosec          IN      A       10.20.79.4
+
+
+www				IN	A	10.20.78.7
+mail			IN	A	10.20.79.5
+imap			IN	A	10.20.79.5
+pop				IN	A	10.20.79.5
