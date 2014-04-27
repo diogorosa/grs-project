@@ -1,2 +1,7 @@
 ifconfig eth0 10.20.78.3 netmask 255.255.255.0 up
 route add default gw 10.20.78.1 dev eth0
+
+mkdir /var/www/mrtg
+indexmaker --output /var/www/mrtg/index.html --title "ICI MRTG Main Page" /etc/mrtg/mrtg.cfg 
+env LANG=C /usr/bin/mrtg /etc/mrtg/mrtg.cfg --daemon
+/etc/init.d/apache2 start
