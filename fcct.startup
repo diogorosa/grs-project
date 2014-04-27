@@ -7,4 +7,8 @@ route add -net 10.20.78.0 netmask 255.255.255.0 gw 30.40.3.2 dev eth3 # to cores
 route add -net 10.20.79.0 netmask 255.255.255.0 gw 30.40.3.2 dev eth3 # to serviceswitch
 route add -net 10.20.77.0 netmask 255.255.255.0 gw 30.40.3.2 dev eth3 # to domesticrouter
 
+route add -net 10.20.76.0 netmask 255.255.255.0 gw 30.40.3.2 dev eth3 # to wifi domestic subnet
+route add -net 10.20.75.0 netmask 255.255.255.0 gw 30.40.3.2 dev eth3 # to cable domestic subnet
+route add -net 10.20.74.0 netmask 255.255.255.0 gw 30.40.3.2 dev eth3 # to stb domestic subnet
+
 snmpd

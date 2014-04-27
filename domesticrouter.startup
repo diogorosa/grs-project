@@ -7,5 +7,9 @@ route add -net 10.20.78.0 netmask 255.255.255.0 gw 10.20.77.1 dev eth0 # to core
 route add -net 10.20.79.0 netmask 255.255.255.0 gw 10.20.77.1 dev eth0 # to service switch
 route add -net 30.40.3.0 netmask 255.255.255.0 gw 10.20.77.1 dev eth0 # to fcct router
 
+route add -net 30.40.0.0 netmask 255.255.255.0 gw 10.20.77.1 dev eth0 # to tester subnet
+route add -net 30.40.1.0 netmask 255.255.255.0 gw 10.20.77.1 dev eth0 # to rootdns subnet
+route add -net 30.40.2.0 netmask 255.255.255.0 gw 10.20.77.1 dev eth0 # to TO dns subnet
+
 /etc/init.d/dhcp3-server start
 snmpd
