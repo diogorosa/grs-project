@@ -8,3 +8,4 @@ route add -net 10.20.79.0 netmask 255.255.255.0 gw 10.20.77.1 dev eth0 # to serv
 route add -net 30.40.3.0 netmask 255.255.255.0 gw 10.20.77.1 dev eth0 # to fcct router
 
 /etc/init.d/dhcp3-server start
+snmpd
