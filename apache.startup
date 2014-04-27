@@ -1,4 +1,9 @@
 ifconfig eth0 10.20.78.7 netmask 255.255.255.0 up
 route add default gw 10.20.78.1 dev eth0
 
+useradd pc1 -m;echo -e 'pc1\npc1\n' | passwd pc1
+useradd pc2 -m;echo -e 'pc2\npc2\n' | passwd pc2
+useradd pc3 -m;echo -e 'pc2\npc3\n' | passwd pc3
+
+a2enmod userdir
 /etc/init.d/apache2 start
