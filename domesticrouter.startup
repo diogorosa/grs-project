@@ -1,7 +1,7 @@
 ifconfig eth0 10.20.77.2 netmask 255.255.255.0 up # to edge router
-ifconfig eth1 10.20.76.2 netmask 255.255.255.0 up # pc1 and pc2
-ifconfig eth2 10.20.75.2 netmask 255.255.255.0 up # pc3
-ifconfig eth3 10.20.74.2 netmask 255.255.255.0 up # stb
+ifconfig eth1 192.168.0.2 netmask 255.255.255.0 up # pc1 and pc2
+ifconfig eth2 192.168.1.2 netmask 255.255.255.0 up # pc3
+ifconfig eth3 192.168.2.2 netmask 255.255.255.0 up # stb
 
 route add -net 10.20.78.0 netmask 255.255.255.0 gw 10.20.77.1 dev eth0 # to coreswitch
 route add -net 10.20.79.0 netmask 255.255.255.0 gw 10.20.77.1 dev eth0 # to service switch

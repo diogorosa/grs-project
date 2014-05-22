@@ -1,3 +1,3 @@
 /etc/init.d/networking start
-route add default gw 10.20.75.2 dev eth0
+route add default gw 192.168.1.2 dev eth0
 useradd pc3 -m;echo -e 'pc3\npc3\n' | passwd pc3
