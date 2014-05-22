@@ -13,3 +13,19 @@ route add -net 30.40.2.0 netmask 255.255.255.0 gw 10.20.77.1 dev eth0 # to TO dn
 
 /etc/init.d/dhcp3-server start
 snmpd
+
+
+
+iptables --flush
+iptables --table nat --flush
+iptables --delete-chain
+iptables --table nat --delete-chain
+
+# Set up IP FORWARDing and Masquerading
+
+iptables --table nat --append POSTROUTING --out-interface eth0 -j MASQUERADE
+iptables --append FORWARD --in-interface eth1 -j ACCEPT
+
+# Enables packet forwarding by kernel
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
