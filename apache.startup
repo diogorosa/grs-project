@@ -7,3 +7,7 @@ useradd pc3 -m;echo -e 'pc2\npc3\n' | passwd pc3
 
 a2enmod userdir
 /etc/init.d/apache2 start
+
+iptables --policy INPUT DROP
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
