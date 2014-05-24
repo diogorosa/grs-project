@@ -37,11 +37,11 @@ iptables -I FORWARD -s 192.168.0.254 -d ! 10.20.78.0/24 -j DROP
 iptables -I FORWARD -s 192.168.0.254 -d 10.20.78.6 -j DROP
 iptables -I FORWARD -s 192.168.0.254 -d 10.20.78.6 -p tcp --dport 80 -j ACCEPT
 
-# block stb traffic except udp, icmp and tcp in port 22
+# block stb to vbd traffic except udp, icmp and tcp in port 22
 iptables -I FORWARD -s 192.168.0.254 -d 10.20.78.4 -j DROP
-iptables -I FORWARD -s 192.168.0.254 -d 10.20.78.6 -p tcp --dport 22 -j ACCEPT
-iptables -I FORWARD -s 192.168.0.254 -d 10.20.78.6 -p udp -j ACCEPT
-iptables -I FORWARD -s 192.168.0.254 -d 10.20.78.6 -p icmp -j ACCEPT
+iptables -I FORWARD -s 192.168.0.254 -d 10.20.78.4 -p tcp --dport 22 -j ACCEPT
+iptables -I FORWARD -s 192.168.0.254 -d 10.20.78.4 -p udp -j ACCEPT
+iptables -I FORWARD -s 192.168.0.254 -d 10.20.78.4 -p icmp -j ACCEPT
 
 
 
