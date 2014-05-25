@@ -14,6 +14,11 @@ route add -net 10.20.74.0 netmask 255.255.255.0 gw 10.20.77.2 dev eth2
 snmpd
 
 
+iptables -I FORWARD -s 127.0.0.0/8 -j DROP
+iptables -I FORWARD -d 127.0.0.0/8 -j DROP
+iptables -I FORWARD -s 0.0.0.0 -j DROP
+iptables -I FORWARD -d 0.0.0.0 -j DROP
+
 #apache only is acceded from internal network
 iptables -I FORWARD -s ! 10.20.78.0/21 -d 10.20.78.6 -j DROP
 
@@ -37,3 +42,4 @@ iptables -I FORWARD -d 10.20.79.5 -p tcp --dport 25 -j ACCEPT
 iptables -I FORWARD -j DROP -d 10.20.79.3
 iptables -I FORWARD -d 10.20.79.3 -p udp --dport 53 -j ACCEPT
 iptables -I  FORWARD -d 10.20.79.3 -p udp --dport 1023:65535 -j ACCEPT
+
