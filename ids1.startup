@@ -1,0 +1,7 @@
+ifconfig eth0 up
+ifconfig eth1 up
+brctl addbr br0
+brctl addif br0 eth0
+brctl addif br0 eth1
+ifconfig br0 up
+snort -A console -h 10.20.78.0/24 -c /etc/snort/snort.conf &
