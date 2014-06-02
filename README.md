@@ -1,1 +1,1 @@
-Project for Simulation of Tripple play service using netkit
+Project for Simulation of Triple play service using netkit
